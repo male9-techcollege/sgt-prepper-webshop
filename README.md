@@ -6,6 +6,3 @@ https://www.figma.com/design/2bYR0lSxnwIaGzadsOTeCe/Sgt.-Prepper---H1WE080125--M
 
 Afleveringsadresse på GitHub:
 https://github.com/male9-techcollege/sgt-prepper-webshop
-
-Live på:
-
