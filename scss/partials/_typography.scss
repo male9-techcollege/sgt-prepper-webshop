@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+}
+
+h2 {
+    /* Codealong said: 
+    font-size: 1.4rem !important;
+    */
+    /* My change to get closer to Figma design */
+    font-size: 2rem !important;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+}
+
+.redAndBoldByMariePierreLessard {
+    /* oklch(57.7% 0.245 27.325) is text-red-600 (Tailwind) */
+    color: oklch(57.7% 0.245 27.325);
+    font-weight: 700;
+}
+
+.greenAndBoldByMariePierreLessard {
+    /* oklch(62.7% 0.194 149.214) is text-green-600 (Tailwind) */
+    /* #18B651 is the green of text in Figma */
+    color: #18B651;
+    font-weight: 700;
+}

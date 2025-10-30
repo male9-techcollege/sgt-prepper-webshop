@@ -1,0 +1,37 @@
+@use "variables";
+
+.navContainerByMariePierreLessard {
+    background-color: variables.$Main1-blue;
+    padding-block: .6rem;
+    padding-inline: 1rem;
+
+    .navByMariePierreLessard {
+        /* Wrapper to keep menu text close to product list on large screens */
+        max-width: 1600px;
+        margin-inline: auto;
+
+        display: flex;
+        gap: 0.4rem;
+
+        list-style-type: none;
+
+        a {
+            display: block;
+            padding-block: .4rem;
+            padding-inline: .8rem;
+            text-decoration: none;
+        }
+
+        /* This class is used in JS, so DO NOT DELETE. Colour matters. */
+        .unselectedMenuItemByMariePierreLessard {
+            color: variables.$White;
+        }
+
+        /* This class is used in JS, so DO NOT DELETE. */
+        .selectedMenuItemByMariePierreLessard {
+            color: variables.$White;
+            border: 1px solid variables.$White;
+            border-radius: 24px;
+        }
+    }
+}

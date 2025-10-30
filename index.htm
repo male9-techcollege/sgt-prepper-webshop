@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Since the favicon is a SVG file, its type is image/svg+xml 
+        Source: https://forum.bricksbuilder.io/t/no-bug-svg-favicons-missing-image-svg-xml-type/23050 
+       
+        VSC gives the rel="shortcut icon", but acc. to W3Schools, favicons just have rel="icon" 
+        https://www.w3schools.com/html/html_favicon.asp
+    
+        Apparently, rel="shortcut icon" is outdated.
+        https://www.drupal.org/node/3220042
+        -->
+    <link rel="icon" href="./images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/styling.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind includes a CSS reset. 
+    <script src="https://cdn.tailwindcss.com"></script>
+     -->
+    <script type="module" defer src="./js/app.js"></script>
+    <title>Sgt. Prepper</title>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+
+</html>

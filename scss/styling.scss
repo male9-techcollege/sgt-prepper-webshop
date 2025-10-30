@@ -1,0 +1,62 @@
+/* I removed notes about classes from earlier exercises in v7 */
+
+@use "partials/variables";
+@use "partials/typography";
+@use "partials/reusable-components";
+@use "partials/global-header";
+@use "partials/nav";
+@use "partials/product-views";
+@use "partials/global-footer";
+
+/*CSS reset with universal selector 
+Potential replacement for Tailwind. 
+TO DO: Problem: both with Tailwind and the CSS reset, the global footer stops going all the way to the bottom on large screens.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* How to make sure that the footer is always at the bottom, even on larger screens? 
+        "Our body is displayed as flex,
+        has a 'flex-direction' of column,
+        its minimum height is 100vh or 100 viewport height,
+        and its background color is blue. As for the header,
+        I just colored it green. Finally,
+        I gave the footer a background color of red and I set its top margin to auto. This is important because,
+        without this,
+        the footer wouldn't stay at the bottom." 
+        blog.alanjc.com/articles/keep-the-footer-at-the-bottom.html
+    */
+    display: flex;
+    flex-direction: column;
+
+    /* TEST - trying to get rid of space at the bottom of body */
+    /* background-color: green; */
+}
+
+.mainByMariePierreLessard {
+    min-height: 400px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    /* Wrapper */
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.flexedFormByMariePierreLessard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+        max-width: 150px;
+    }
+
+    /* DO NOT USE because the headings are to the left in the Figma design. Distance between heading and form looks wrong.  
+    justify-self: center;
+    */
+}

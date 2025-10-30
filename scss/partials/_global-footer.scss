@@ -1,0 +1,61 @@
+@use "variables";
+
+.globalFooterByMariePierreLessard {
+    /* This is to make sure that the global footer stays at the bottom. See also body. */
+    margin-top: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    border-top: 4px solid variables.$Main1-blue;
+
+    /* TEST */
+    /* background-color: red; */
+
+    ul {
+        list-style-type: none;
+    }
+
+    .globalFooter1stRowByMariePierreLessard {
+        /* Wrapper on a div inside of the first row of the footer (to keep text under product list on large screens)
+        TO DO: responsiveness: min-with only works on desktops. It creates space between the columns.
+        Alternative: a responsive gap.
+        */
+        min-width: 768px;
+        max-width: 1600px;
+        margin-inline: auto;
+
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+
+        /* oklch(29.3% 0.066 243.157) is color-sky-950 (Tailwind) (bg-sky-950 = background with that colour) */
+        /* oklch(55.4% 0.046 257.417) is color-slate-500 (Tailwind) (bg-slate-500 = background with that colour) */
+        /* Main1_blue in Figma */
+        color: variables.$Main1-blue;
+        padding: 1rem;
+
+        /* Deleted because this was only useful with the Tailwind CSS reset. 
+        a {
+            text-decoration: underline;
+        }
+        */
+    }
+
+    .globalFooter2ndRowByMariePierreLessard {
+        /* Potential to do because the background image does not fill the whole width on large screens:  
+        Since background-color: #334156 ($MainBlue); is the colour of the dark part of the SVG, it could fill what the SVG doesn't fill.
+        But it can't be behind the SVG, otherwise details of the image get lost.
+        Set backgrounds next to each other?
+        Create a grid from certain resolutions?
+        Maybe it looks fine as is. 
+        */
+        /* TO DO: footer still isn't all the way to the bottom on large screens. */
+        min-height: 170px;
+        background-image: url(../images/footer-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+}
