@@ -104,8 +104,9 @@ export const ProductDetailsView = (product) => {
     stockElmByMariePierreLessard.className = stockElmClassByMariePierreLessard();
     div1.append(stockElmByMariePierreLessard);
 
+    /* For testing purposes: LifeStraw Personal Filter: 120 left in stock */
     function stockElmTextByMariePierreLessard() {
-        if (!stock) {
+        if (stock == 0) {
             return "Ikke på lager";
         } else {
             return "På lager";
@@ -113,7 +114,7 @@ export const ProductDetailsView = (product) => {
     };
 
     function stockElmClassByMariePierreLessard() {
-        if (!stock) {
+        if (stock == 0) {
             const red = "redAndBoldByMariePierreLessard";
             return red;
         } else {
