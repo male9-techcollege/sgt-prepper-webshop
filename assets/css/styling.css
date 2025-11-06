@@ -1,0 +1,530 @@
+/* I removed notes about classes from earlier exercises in v7 */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+/* Maybe TO DO: red and green, padding, etc. */
+/* COLOURS (from Figma design) */
+/* NEGATIVE SPACE */
+/* Maybe TO DO: Sizes not based on Figma design (yet?) */
+/* MIN AND MAX WIDTHS AND HEIGHTS */
+/* BREAKPOINTS */
+/* I removed notes about classes from earlier exercises in v7 */
+/* NOT USED YET */
+/* I removed notes about classes from earlier exercises in v7 */
+html {
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+}
+
+h2 {
+  /* Codealong said: 
+  font-size: variables.$base-size-x140pc !important;
+  */
+  /* My change to get closer to Figma design */
+  font-size: 2rem !important;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem !important;
+  font-weight: 700;
+}
+
+.boldByMariePierreLessard {
+  font-weight: 700;
+}
+
+.cursiveByMariePierreLessard {
+  font-style: italic;
+}
+
+.redAndBoldByMariePierreLessard {
+  /* oklch(57.7% 0.245 27.325) is text-red-600 (Tailwind) */
+  /* #FF0000 is the red of the number of the shopping basket in Figma */
+  color: #FF0000;
+  font-weight: 700;
+}
+
+.greenAndBoldByMariePierreLessard {
+  /* oklch(62.7% 0.194 149.214) is text-green-600 (Tailwind) */
+  /* #18B651 and 17A34A are the greens of text in Figma */
+  color: #18B651;
+  font-weight: 700;
+}
+
+.bottomMarginByMariePierreLessard {
+  margin-bottom: 2rem;
+}
+
+.topMarginByMariePierreLessard {
+  margin-bottom: 2rem;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+/* For testing purposes during production 
+.testColourOneByMariePierreLessard {
+    background-color: red;
+}
+*/
+.defaultInputByMariePierreLessard {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid #64758B;
+}
+
+.defaultButtonByMariePierreLessard {
+  background-color: #18B651;
+  color: #ffffff;
+  font-weight: 700;
+  padding-block: 0.4rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1.5rem #068836 inset;
+}
+.defaultButtonByMariePierreLessard:hover {
+  background-color: #10dd5b;
+  box-shadow: 0.5rem 0.5rem 1.5rem #17A34A inset;
+}
+.defaultButtonByMariePierreLessard:focus {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: none;
+  border: 0.25rem solid #ffffff;
+}
+.defaultButtonByMariePierreLessard:active {
+  background-color: #0e652e;
+  border: 0.125rem solid #000000;
+}
+
+.btnWithImageByMariePierreLessard {
+  /* For testing purposes: 
+      background-color: red;
+      border: 1px solid blue;
+      OR
+      */
+  background-image: url("../../assets/images/icons/trash-solid-full.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  /* There is text in the button, otherwise it collapses and becomes invisible. */
+  color: transparent;
+  border: none;
+  height: 1.5rem;
+}
+.btnWithImageByMariePierreLessard:hover {
+  cursor: pointer;
+  /* TO DO: this isn't applied to the background image, so the rollover effects don't exist. */
+  /* fill is inherited; it applies to the SVG inside of the button */
+  fill: #A3B4CC;
+}
+.btnWithImageByMariePierreLessard:active {
+  /* fill is inherited; it applies to the SVG inside of the button */
+  fill: #334156;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+.globalHeaderContainerByMariePierreLessard {
+  /* MainBlue in Figma */
+  background-color: #334156;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  /* Addition from ex. 6 */
+  /* Wrapper */
+  max-width: 1600px;
+  margin-inline: auto;
+  /* This is an a element. */
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .leftSideGroupByMariePierreLessard {
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 1.5rem;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .leftSideGroupByMariePierreLessard:hover {
+  background-color: #64758B;
+  cursor: pointer;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .leftSideGroupByMariePierreLessard:focus {
+  background-color: #000000;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .leftSideGroupByMariePierreLessard:active {
+  background-color: #A3B4CC;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard {
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  align-items: center;
+  gap: 1rem;
+  /* This is an a element. */
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .loginLinkByMariePierreLessard {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  /* Light Blue in Figma: background color of the "Log ind" text */
+  background-color: #A3B4CC;
+  border-radius: 1.5rem;
+  padding-inline: 0.666rem;
+  padding-block: 0.1rem;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .loginLinkByMariePierreLessard:hover {
+  background-color: #64758B;
+  cursor: pointer;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .loginLinkByMariePierreLessard:focus {
+  background-color: #000000;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .loginLinkByMariePierreLessard:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .cartSectionByMariePierreLessard {
+  height: 2rem;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .cartSectionByMariePierreLessard svg {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  fill: #ffffff;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .cartSectionByMariePierreLessard:hover {
+  background-color: #64758B;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .cartSectionByMariePierreLessard:focus {
+  background-color: #000000;
+}
+.globalHeaderContainerByMariePierreLessard .flexedHeaderByMariePierreLessard .rightSideOfHeaderByMariePierreLessard .cartSectionByMariePierreLessard:active {
+  background-color: #A3B4CC;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+.navContainerByMariePierreLessard {
+  background-color: #64758B;
+  padding-block: 0.666rem;
+  padding-inline: 1rem;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard {
+  /* Wrapper to keep menu text close to product list on large screens */
+  max-width: 1600px;
+  margin-inline: auto;
+  display: flex;
+  gap: 0.4rem;
+  list-style-type: none;
+  /* This class is used in JS, so DO NOT DELETE. Colour matters. */
+  /* This class is used in JS, so DO NOT DELETE. */
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard a {
+  display: block;
+  padding-block: 0.4rem;
+  padding-inline: 0.8rem;
+  text-decoration: none;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard a:hover {
+  background-color: #000000;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard a:focus {
+  border-radius: 1.5rem;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard a:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard .unselectedMenuItemByMariePierreLessard {
+  color: #ffffff;
+}
+.navContainerByMariePierreLessard .navByMariePierreLessard .selectedMenuItemByMariePierreLessard {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 1.5rem;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+.productListByMariePierreLessard {
+  box-shadow: 0px 0px 1.5rem 0.125rem #A3B4CC;
+  border-radius: 1.5rem;
+  /* Only inline padding because each list item has its own block padding,
+  and I don't want to expand that further (visually). */
+  padding-inline: 2rem;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard {
+  /* TO DO mixin for this when I add such a DIV to the detailed view */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* This is to create the line between the list items */
+  gap: 1px;
+  background-color: #A3B4CC;
+  /* This is to avoid showing grey in corners since images have a border radius. */
+  border-radius: 1.5rem;
+  /* TO DO: responsiveness on the list items */
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard a {
+  color: #000000;
+  text-decoration: none;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard .productListItemByMariePierreLessard {
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  gap: 1rem;
+  justify-content: space-between;
+  /* Minimum space between flexed items on small screens */
+  padding-block: 2rem;
+  background-color: #ffffff;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard .productListItemByMariePierreLessard .leftSideFlexByMariePierreLessard {
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  gap: 1rem;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard .productListItemByMariePierreLessard .productListImgByMariePierreLessard {
+  height: 100%;
+  border-radius: 1.5rem;
+  max-width: 200px;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard .productListItemByMariePierreLessard .productListCostContainerByMariePierreLessard {
+  text-align: right;
+  font-size: 1.4rem;
+}
+.productListByMariePierreLessard .colouredListContainerByMariePierreLessard .productListItemByMariePierreLessard:hover div:first-of-type div {
+  text-decoration: underline;
+}
+
+.productDetailsByMariePierreLessard {
+  /* Maybe TO DO: this should be the minimum space between flexed items on small screens (I might add DIVs) */
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  gap: 1rem;
+  box-shadow: 0px 0px 1.5rem 0.125rem #A3B4CC;
+  border-radius: 1.5rem;
+  padding: 1.6rem;
+}
+.productDetailsByMariePierreLessard .productDetailsImgByMariePierreLessard {
+  border-radius: 1.5rem;
+  max-width: 250px;
+}
+.productDetailsByMariePierreLessard .infoColByMariePierreLessard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  /* This is the qty and the button */
+}
+.productDetailsByMariePierreLessard .infoColByMariePierreLessard ul {
+  list-style-position: outside;
+  /* Instead of padding-left, to account for internationalisation. */
+  padding-inline: 1.6rem;
+}
+.productDetailsByMariePierreLessard .infoColByMariePierreLessard .productDetailsPriceByMariePierreLessard {
+  font-size: 1.4rem;
+}
+.productDetailsByMariePierreLessard .infoColByMariePierreLessard form {
+  display: flex;
+  gap: 0.666rem;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+.cartListByMariePierreLessard {
+  box-shadow: 0px 0px 1.5rem 0.125rem #A3B4CC;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.colouredCartContainerByMariePierreLessard {
+  /* TO DO mixin for this when I add such a DIV to the detailed view (to show reviews) */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* This is to create the line between the list items */
+  gap: 1px;
+  background-color: #A3B4CC;
+}
+
+.cartListItemByMariePierreLessard {
+  display: grid;
+  grid-template-columns: 1fr 11fr 2fr 2fr;
+  /* Minimum space between flexed items on small screens */
+  gap: 1rem;
+  padding-block: 1rem;
+  list-style-type: none;
+  background-color: #ffffff;
+}
+
+.buttonContainerByMariePierreLessard {
+  background-color: #ffffff;
+  /* This places the button to the right. */
+  text-align: right;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+.globalFooterByMariePierreLessard {
+  /* This is to make sure that the global footer stays at the bottom. See also body. */
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  border-top: 0.25rem solid #64758B;
+  /* TEST */
+  /* background-color: red; */
+}
+.globalFooterByMariePierreLessard ul {
+  list-style-type: none;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard {
+  /* Wrapper on a div inside of the first row of the footer (to keep text under product list on large screens)
+  TO DO: responsiveness: min-width only works on desktops. It creates space between the columns.
+  Alternative: a responsive gap.
+  */
+  min-width: 768px;
+  max-width: 1600px;
+  margin-inline: auto;
+  display: flex;
+  /* Since 
+      flex-direction: row;
+      is the default, it can be omitted.
+      */
+  gap: 1rem;
+  justify-content: space-around;
+  /* oklch(29.3% 0.066 243.157) is color-sky-950 (Tailwind) (bg-sky-950 = background with that colour) */
+  /* oklch(55.4% 0.046 257.417) is color-slate-500 (Tailwind) (bg-slate-500 = background with that colour) */
+  /* Main1_blue in Figma */
+  color: #64758B;
+  padding: 1rem;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard a {
+  color: #64758B;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard a:hover {
+  color: #000000;
+  cursor: pointer;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard a:focus {
+  color: #000000;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard a:active {
+  color: #A3B4CC;
+}
+.globalFooterByMariePierreLessard .globalFooter1stRowByMariePierreLessard address {
+  font-style: normal;
+}
+.globalFooterByMariePierreLessard .globalFooter2ndRowByMariePierreLessard {
+  /* Potential to do because the background image does not fill the whole width on large screens:  
+  Since background-color: #334156 ($MainBlue); is the colour of the dark part of the SVG, it could fill what the SVG doesn't fill.
+  But it can't be behind the SVG, otherwise details of the image get lost.
+  Set backgrounds next to each other?
+  Create a grid from certain resolutions?
+  Maybe it looks fine as is. 
+  */
+  min-height: 160px;
+  background-image: url(../images/footer-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* I removed notes about classes from earlier exercises in v7 */
+/* In the codealong, this was applied to a div that filled the HTML element main (see molecule MainView). 
+*/
+.cookieOverlayByMariePierreLessard {
+  /* Positioned relative to body */
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3rem;
+}
+
+.cookieBannerStylingByMariePierreLessard {
+  justify-self: center;
+  background-color: #334156;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  color: #ffffff;
+}
+
+/*CSS reset with universal selector 
+Potential replacement for Tailwind. 
+NOTE: both with Tailwind and the CSS reset, the global footer stopped going all the way to the bottom on large screens.
+Giving main a min-height of 400px did not suffice. For some reason, after I made the bottom margin of main 3x the size of the top margin,
+the global footer ended up all the way to the bottom on 2560px screens. 
+It also looks better to have this much air next to a large footer. Was main almost long enough, but not quite?
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* How to make sure that the footer is always at the bottom, even on larger screens? 
+      "Our body is displayed as flex,
+      has a 'flex-direction' of column,
+      its minimum height is 100vh or 100 viewport height,
+      and its background color is blue. As for the header,
+      I just colored it green. Finally,
+      I gave the footer a background color of red and I set its top margin to auto. This is important because,
+      without this,
+      the footer wouldn't stay at the bottom." 
+      blog.alanjc.com/articles/keep-the-footer-at-the-bottom.html
+  */
+  display: flex;
+  flex-direction: column;
+  /* TEST - trying to get rid of space at the bottom of body */
+  /* background-color: green; */
+}
+
+.mainByMariePierreLessard {
+  min-height: 400px;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  /* Wrapper */
+  max-width: 1200px;
+  margin-inline: auto;
+  /* To position the cookie banner */
+  position: relative;
+}
+
+.flexedFormByMariePierreLessard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* For cookie banner */
+  /* REMINDER: 
+  DO NOT USE because the headings are to the left in the Figma design. Distance between heading and form looks wrong.  
+  justify-self: center;
+  */
+}
+.flexedFormByMariePierreLessard div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+}
+.flexedFormByMariePierreLessard button {
+  max-width: 150px;
+}/*# sourceMappingURL=styling.css.map */

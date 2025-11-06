@@ -1,25 +1,40 @@
-@use "variables";
+@use "./variables";
 
 .navContainerByMariePierreLessard {
     background-color: variables.$Main1-blue;
-    padding-block: .6rem;
-    padding-inline: 1rem;
+    padding-block: variables.$two-thirds-of-base-size;
+    padding-inline: variables.$base-size;
 
     .navByMariePierreLessard {
         /* Wrapper to keep menu text close to product list on large screens */
-        max-width: 1600px;
+        max-width: variables.$max-width-on-large-screens;
         margin-inline: auto;
 
         display: flex;
-        gap: 0.4rem;
+        gap: variables.$base-size-x40pc;
 
         list-style-type: none;
 
         a {
             display: block;
-            padding-block: .4rem;
-            padding-inline: .8rem;
+            padding-block: variables.$base-size-x40pc;
+            padding-inline: variables.$base-size-x80pc;
             text-decoration: none;
+
+            &:hover {
+                background-color: variables.$Black;
+                border-radius: variables.$base-size-x150pc;
+                cursor: pointer;
+            }
+
+            &:focus {
+                border-radius: variables.$base-size-x150pc;
+            }
+
+            &:active {
+                background-color: variables.$White;
+                color: variables.$Black;
+            }
         }
 
         /* This class is used in JS, so DO NOT DELETE. Colour matters. */
@@ -31,7 +46,7 @@
         .selectedMenuItemByMariePierreLessard {
             color: variables.$White;
             border: 1px solid variables.$White;
-            border-radius: 24px;
+            border-radius: variables.$base-size-x150pc;
         }
     }
 }

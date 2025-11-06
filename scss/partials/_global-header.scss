@@ -1,62 +1,95 @@
-@use "variables";
+@use "./variables";
+@use "./mixins";
 
 .globalHeaderContainerByMariePierreLessard {
     /* MainBlue in Figma */
     background-color: variables.$MainBlue;
-    color: variables.$White;
-
-    a {
-        color: variables.$White;
-        text-decoration: none;
-    }
 
     .flexedHeaderByMariePierreLessard {
         display: flex;
         justify-content: space-between;
 
-        padding: 1rem;
+        padding: variables.$base-size;
 
         /* Addition from ex. 6 */
-        /* Wrapper to keep menu text close to product list on large screens */
-        max-width: 1600px;
+        /* Wrapper */
+        max-width: variables.$max-width-on-large-screens;
         margin-inline: auto;
 
+        /* This is an a element. */
         .leftSideGroupByMariePierreLessard {
-            display: flex;
-            /* Since 
-            flex-direction: row;
-            is the default, it can be omitted.
-            */
-            align-items: center;
-            gap: 1rem;
+            @include mixins.flexed-centered-and-spaced-by-Marie-Pierre-Lessard;
+
+            color: variables.$White;
+            text-decoration: none;
+            border-radius: variables.$base-size-x150pc;
+
+            &:hover {
+                background-color: variables.$Main1-blue;
+                cursor: pointer;
+            }
+
+            &:focus {
+                background-color: variables.$Black;
+            }
+
+            &:active {
+                background-color: variables.$LightBlue;
+            }
         }
 
         .rightSideOfHeaderByMariePierreLessard {
-            display: flex;
-            /* Since 
-            flex-direction: row;
-            is the default, it can be omitted.
-            */
-            align-items: center;
-            gap: 1rem;
+            @include mixins.flexed-centered-and-spaced-by-Marie-Pierre-Lessard;
 
-            p {
+            .loginLinkByMariePierreLessard {
+                color: variables.$White;
+                text-decoration: none;
                 font-weight: 700;
+
                 /* Light Blue in Figma: background color of the "Log ind" text */
                 background-color: variables.$LightBlue;
-                padding-inline: .6rem;
-                padding-block: .1rem;
-                border-radius: 24px;
+                border-radius: variables.$base-size-x150pc;
+                padding-inline: variables.$two-thirds-of-base-size;
+                padding-block: variables.$tenth-of-base-size;
+
+                &:hover {
+                    background-color: variables.$Main1-blue;
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    background-color: variables.$Black;
+                }
+
+                &:active {
+                    background-color: variables.$White;
+                    color: variables.$Black;
+                }
             }
 
+            /* This is an a element. */
             .cartSectionByMariePierreLessard {
-                height: 2rem;
+                height: variables.$double-of-base-size;
 
                 svg {
                     width: 100%;
                     height: 100%;
                     box-sizing: border-box;
                     fill: variables.$White;
+                }
+
+                &:hover {
+                    background-color: variables.$Main1-blue;
+                    border-radius: variables.$half-of-base-size;
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    background-color: variables.$Black;
+                }
+
+                &:active {
+                    background-color: variables.$LightBlue;
                 }
             }
         }

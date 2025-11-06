@@ -1,7 +1,10 @@
+@use "./variables";
+
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
     font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+    font-size: 16px; // variables.$base-size
 }
 
 h1 {
@@ -10,28 +13,45 @@ h1 {
 
 h2 {
     /* Codealong said: 
-    font-size: 1.4rem !important;
+    font-size: variables.$base-size-x140pc !important;
     */
     /* My change to get closer to Figma design */
-    font-size: 2rem !important;
+    font-size: variables.$double-of-base-size !important;
     font-weight: 700;
-    padding-bottom: 2rem;
+    padding-bottom: variables.$double-of-base-size;
 }
 
 h3 {
-    font-size: 1.4rem !important;
+    font-size: variables.$base-size-x140pc !important;
     font-weight: 700;
+}
+
+.boldByMariePierreLessard {
+    font-weight: 700;
+}
+
+.cursiveByMariePierreLessard {
+    font-style: italic;
 }
 
 .redAndBoldByMariePierreLessard {
     /* oklch(57.7% 0.245 27.325) is text-red-600 (Tailwind) */
-    color: oklch(57.7% 0.245 27.325);
+    /* #FF0000 is the red of the number of the shopping basket in Figma */
+    color: variables.$Red;
     font-weight: 700;
 }
 
 .greenAndBoldByMariePierreLessard {
     /* oklch(62.7% 0.194 149.214) is text-green-600 (Tailwind) */
-    /* #18B651 is the green of text in Figma */
-    color: #18B651;
+    /* #18B651 and 17A34A are the greens of text in Figma */
+    color: variables.$Green1;
     font-weight: 700;
+}
+
+.bottomMarginByMariePierreLessard {
+    margin-bottom: variables.$double-of-base-size;
+}
+
+.topMarginByMariePierreLessard {
+    margin-bottom: variables.$double-of-base-size;
 }

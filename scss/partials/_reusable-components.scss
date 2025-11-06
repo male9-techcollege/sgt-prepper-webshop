@@ -1,18 +1,68 @@
 @use "./variables";
 
+/* For testing purposes during production 
+.testColourOneByMariePierreLessard {
+    background-color: red;
+}
+*/
+
 .defaultInputByMariePierreLessard {
-    padding: .4rem;
-    border-radius: 8px;
+    padding: variables.$base-size-x40pc;
+    border-radius: variables.$half-of-base-size;
     border: 1px solid variables.$Main1-blue;
 }
 
 .defaultButtonByMariePierreLessard {
-    background-color: #18B651;
+    background-color: variables.$Green1;
     color: variables.$White;
     font-weight: 700;
 
-    padding-block: .4rem;
-    padding-inline: 1rem;
-    border-radius: 8px;
-    box-shadow: 8px 8px 24px #068836 inset;
+    padding-block: variables.$base-size-x40pc;
+    padding-inline: variables.$base-size;
+    border-radius: variables.$half-of-base-size;
+    box-shadow: variables.$half-of-base-size variables.$half-of-base-size variables.$base-size-x150pc variables.$Dark-green inset;
+
+    &:hover {
+        background-color: variables.$Light-green;
+        box-shadow: variables.$half-of-base-size variables.$half-of-base-size variables.$base-size-x150pc variables.$Green2 inset;
+    }
+
+    &:focus {
+        background-color: variables.$Black;
+        color: variables.$White;
+        box-shadow: none;
+        border: variables.$fourth-of-base-size solid variables.$White;
+    }
+
+    &:active {
+        background-color: variables.$Very-dark-green;
+        border: variables.$eighth-of-base-size solid variables.$Black;
+    }
+}
+
+.btnWithImageByMariePierreLessard {
+    /* For testing purposes: 
+        background-color: red;
+        border: 1px solid blue;
+        OR
+        */
+    background-image: url("../../assets/images/icons/trash-solid-full.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    /* There is text in the button, otherwise it collapses and becomes invisible. */
+    color: transparent;
+    border: none;
+    height: variables.$base-size-x150pc;
+
+    &:hover {
+        cursor: pointer;
+        /* TO DO: this isn't applied to the background image, so the rollover effects don't exist. */
+        /* fill is inherited; it applies to the SVG inside of the button */
+        fill: variables.$LightBlue;
+    }
+
+    &:active {
+        /* fill is inherited; it applies to the SVG inside of the button */
+        fill: variables.$MainBlue;
+    }
 }

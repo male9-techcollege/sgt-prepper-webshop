@@ -1,6 +1,40 @@
 /* Maybe TO DO: red and green, padding, etc. */
+/* COLOURS (from Figma design) */
+$White: #ffffff;
+$TransparentWhite: #ffffff99;
+$Black: #000000;
 $MainBlue: #334156;
+$TransparentMainBlue: #33415699;
 $Main1-blue: #64758B;
 $LightBlue: #A3B4CC;
-$White: #ffffff;
-$Black: #000000;
+$Green1: #18B651;
+$Green2: #17A34A;
+$Light-green: #10dd5b;
+$Dark-green: #068836;
+$Very-dark-green: #0e652e;
+$Red: #FF0000;
+
+/* NEGATIVE SPACE */
+/* Maybe TO DO: Sizes not based on Figma design (yet?) */
+$tenth-of-base-size: .1rem;
+$eighth-of-base-size: .125rem;
+$fourth-of-base-size: .25rem;
+$base-size-x40pc: .4rem;
+$half-of-base-size: .5rem;
+$two-thirds-of-base-size: .666rem;
+$base-size-x80pc: .8rem;
+$base-size: 1rem;
+$base-size-x140pc: 1.4rem;
+$base-size-x150pc: 1.5rem;
+$base-size-x160pc: 1.6rem;
+$double-of-base-size: 2rem;
+$triple-of-base-size: 3rem;
+$base-size-x600pc: 6rem;
+
+/* MIN AND MAX WIDTHS AND HEIGHTS */
+$max-width-on-large-screens: 1600px; // 100rem if 1rem is 16px
+$max-width-on-large-screens-x75pc: 1200px;
+$min-height-of-global-footer: 160px; // 10rem if 1rem is 16px
+
+/* BREAKPOINTS */
+$tablet-breakpoint: 768px;

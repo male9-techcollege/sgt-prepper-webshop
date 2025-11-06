@@ -1,0 +1,25 @@
+@use "./variables";
+@use "./mixins";
+
+/* In the codealong, this was applied to a div that filled the HTML element main (see molecule MainView). 
+*/
+.cookieOverlayByMariePierreLessard {
+    /* Positioned relative to body */
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+
+    background-color: variables.$TransparentWhite;
+    padding: variables.$triple-of-base-size;
+}
+
+.cookieBannerStylingByMariePierreLessard {
+    justify-self: center;
+    background-color: variables.$MainBlue;
+    border-radius: variables.$base-size-x150pc;
+    padding: variables.$triple-of-base-size;
+    color: variables.$White;
+}

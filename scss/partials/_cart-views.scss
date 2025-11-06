@@ -1,0 +1,33 @@
+@use "./variables";
+@use "./mixins";
+
+.cartListByMariePierreLessard {
+    @include mixins.box-shadow-and-round-corners-by-Marie-Pierre-Lessard;
+    padding: variables.$double-of-base-size;
+}
+
+.colouredCartContainerByMariePierreLessard {
+    /* TO DO mixin for this when I add such a DIV to the detailed view (to show reviews) */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* This is to create the line between the list items */
+    gap: 1px;
+    background-color: variables.$LightBlue;
+}
+
+.cartListItemByMariePierreLessard {
+    display: grid;
+    grid-template-columns: 1fr 11fr 2fr 2fr;
+    /* Minimum space between flexed items on small screens */
+    gap: variables.$base-size;
+    padding-block: variables.$base-size;
+
+    list-style-type: none;
+    background-color: variables.$White;
+}
+
+.buttonContainerByMariePierreLessard {
+    background-color: variables.$White;
+    /* This places the button to the right. */
+    text-align: right;
+}

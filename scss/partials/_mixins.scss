@@ -1,0 +1,32 @@
+@use "./variables";
+
+@mixin flexed-and-spaced-standard-by-Marie-Pierre-Lessard {
+    display: flex;
+    /* Since 
+        flex-direction: row;
+        is the default, it can be omitted.
+        */
+    gap: variables.$base-size;
+}
+
+/* NOT USED YET */
+@mixin flexed-vertically-and-spaced-2x-by-Marie-Pierre-Lessard {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$double-of-base-size;
+}
+
+@mixin flexed-centered-and-spaced-by-Marie-Pierre-Lessard {
+    display: flex;
+    /* Since 
+        flex-direction: row;
+        is the default, it can be omitted.
+        */
+    align-items: center;
+    gap: variables.$base-size;
+}
+
+@mixin box-shadow-and-round-corners-by-Marie-Pierre-Lessard {
+    box-shadow: 0px 0px variables.$base-size-x150pc variables.$eighth-of-base-size variables.$LightBlue;
+    border-radius: variables.$base-size-x150pc;
+}

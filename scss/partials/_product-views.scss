@@ -1,11 +1,14 @@
-@use "variables";
+@use "./variables";
+@use "./mixins";
 
 .productListByMariePierreLessard {
-    box-shadow: 0px 0px 24px 2px variables.$LightBlue;
-    border-radius: 24px;
-    padding-inline: 2rem;
+    @include mixins.box-shadow-and-round-corners-by-Marie-Pierre-Lessard;
+    /* Only inline padding because each list item has its own block padding,
+    and I don't want to expand that further (visually). */
+    padding-inline: variables.$double-of-base-size;
 
     .colouredListContainerByMariePierreLessard {
+        /* TO DO mixin for this when I add such a DIV to the detailed view */
         display: grid;
         grid-template-columns: 1fr;
         /* This is to create the line between the list items */
@@ -13,7 +16,7 @@
         background-color: variables.$LightBlue;
 
         /* This is to avoid showing grey in corners since images have a border radius. */
-        border-radius: 24px;
+        border-radius: variables.$base-size-x150pc;
 
         a {
             color: variables.$Black;
@@ -22,54 +25,71 @@
 
         /* TO DO: responsiveness on the list items */
         .productListItemByMariePierreLessard {
-            display: flex;
+            @include mixins.flexed-and-spaced-standard-by-Marie-Pierre-Lessard;
             justify-content: space-between;
             /* Minimum space between flexed items on small screens */
-            gap: 1rem;
 
-            padding-block: 2rem;
+            padding-block: variables.$double-of-base-size;
             background-color: variables.$White;
 
+            .leftSideFlexByMariePierreLessard {
+                @include mixins.flexed-and-spaced-standard-by-Marie-Pierre-Lessard;
+            }
+
             .productListImgByMariePierreLessard {
-                border-radius: 24px;
+                height: 100%;
+                border-radius: variables.$base-size-x150pc;
                 max-width: 200px;
             }
 
             .productListCostContainerByMariePierreLessard {
                 text-align: right;
+                font-size: variables.$base-size-x140pc;
+            }
+
+            &:hover {
+                div:first-of-type {
+                    div {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
 }
 
 .productDetailsByMariePierreLessard {
-    display: flex;
-    /* Minimum space between flexed items on small screens (I might add DIVs) */
-    gap: 1rem;
+    /* Maybe TO DO: this should be the minimum space between flexed items on small screens (I might add DIVs) */
+    @include mixins.flexed-and-spaced-standard-by-Marie-Pierre-Lessard;
 
-    border-radius: 24px;
-    box-shadow: 0px 0px 24px 2px variables.$LightBlue;
-    padding: 1.6rem;
-
-    ul {
-        list-style-position: outside;
-        /* Instead of padding-left, to account for internationalisation. */
-        padding-inline: 1.6rem;
-    }
-
-    /* This is the qty and the button */
-    form {
-        display: flex;
-        gap: .6rem;
-        margin-block: 1rem;
-    }
+    @include mixins.box-shadow-and-round-corners-by-Marie-Pierre-Lessard;
+    padding: variables.$base-size-x160pc;
 
     .productDetailsImgByMariePierreLessard {
-        border-radius: 24px;
+        border-radius: variables.$base-size-x150pc;
         max-width: 250px;
     }
 
-    .productDetailsPriceByMariePierreLessard {
-        font-size: 1.4rem;
+    .infoColByMariePierreLessard {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: variables.$base-size;
+
+        ul {
+            list-style-position: outside;
+            /* Instead of padding-left, to account for internationalisation. */
+            padding-inline: variables.$base-size-x160pc;
+        }
+
+        .productDetailsPriceByMariePierreLessard {
+            font-size: variables.$base-size-x140pc;
+        }
+
+        /* This is the qty and the button */
+        form {
+            display: flex;
+            gap: variables.$two-thirds-of-base-size;
+        }
+
     }
 }
