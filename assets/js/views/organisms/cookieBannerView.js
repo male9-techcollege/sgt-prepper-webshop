@@ -41,9 +41,9 @@ export const cookieBannerView = () => {
     /* Codealong said: 
     text.innerText = "Vi bruger cookies til statistik og marketing. Du kan vælge nødvendige cookies eller acceptere alle.";
     */
-    /* TO DO: add router to cookie policy. 
-    It would also be good to add an external value that indicates the lifespan of the cookies. */
-    text.innerText = "Ifølge GDPR-forordningen, har vi behov for dit samtykke for at gemme cookies på dit device eller computer. Vi bruger cookies til statistik og markedsføring. Du kan finde flere oplysninger om disse formål i vores privatlivspolitik. Du kan vælge at acceptere alle cookies eller kun de nødvendige, det vil sige funktionelle cookies. Vores cookies bliver gemt i 28 dage.";
+    /* TO DO: 
+    It would be good to add an external value that indicates the lifespan of the cookies. */
+    text.innerHTML = `Ifølge GDPR-forordningen, har vi behov for dit samtykke for at gemme cookies på dit device eller computer. Vi bruger cookies til statistik og markedsføring. Du kan finde flere oplysninger om disse formål i vores <a href="/index.htm#/privacy" >privatlivspolitik</a>. Du kan vælge at acceptere alle cookies eller kun de nødvendige, det vil sige funktionelle cookies. Vores cookies bliver gemt i 28 dage.`;
 
     /* Tailwind styling  
     const btns = Div("flex gap-2");

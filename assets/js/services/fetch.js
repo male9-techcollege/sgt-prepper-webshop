@@ -1,6 +1,18 @@
 import { getToken } from "./auth.js";
 
 /* Asynchronous function: it must be called by another asynchronous function */
+/* "HTTP Methods
+GET
+POST
+PUT
+HEAD
+DELETE
+PATCH
+OPTIONS
+CONNECT
+TRACE
+The two most common HTTP methods are: GET and POST."
+https://www.w3schools.com/tags/ref_httpmethods.asp */
 // request() kan bruges til både GET, POST, PUT og DELETE requests
 export const request = async (url, method = "GET", body = {}) => {
     if (!url) throw new Error("Missing URL");

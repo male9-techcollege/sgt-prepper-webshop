@@ -35,6 +35,7 @@ export const ProductPage = () => {
 
     /* Failed attempt (by me) to create home page like in Figma. This could not work, both because of the API, and because
     this does show the home page, but menu no longer works.
+    Heinz said that it is impossible to show a front page like in the design with this specific API, so I wasted my time.
     On top of the API problem, I think that, since "else if" only gets applied if the first condition is false,
     it never happens because the 1st condition is always true (browser might disreguard the GET parameters).    
     let home = new URL("http://127.0.0.1:5501/index.htm");
@@ -138,7 +139,7 @@ export const ProductDetails = async (product) => {
         handleAddToCart(e);
     });
 
-    const layout = Layout("Produkt", html);
+    const layout = Layout("Varebeskrivelse", html);
 
     return layout;
 };

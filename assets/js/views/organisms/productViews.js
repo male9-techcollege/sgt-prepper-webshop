@@ -142,10 +142,12 @@ export const ProductDetailsView = (product) => {
 
     /* My additions in view of meeting assignment requirements */
     /* There are no shipping restrictions given for each product in the db.
-    - It is a legal requirement to add shipping restrictions, if any. (Here, I chose to write no restrictions: "Leveres overalt.")
+    Since shipping fees are included in the price, this shop cannot be shipping to the whole world.
+
+    It is a legal requirement to add shipping restrictions, if any. 
     */
     const shippingRestrictionsByMariePierreLessard = Paragraph();
-    shippingRestrictionsByMariePierreLessard.innerText = "Leveres overalt.";
+    shippingRestrictionsByMariePierreLessard.innerText = "Webshoppen leveres kun til adresser i Danmark. Kontakt kundeservice for at få varer leveret til udenlandske adresser.";
     descriptionTwoByMariePierreLessard.append(shippingRestrictionsByMariePierreLessard);
     infoCol.append(descriptionTwoByMariePierreLessard);
 
@@ -177,14 +179,15 @@ export const ProductDetailsView = (product) => {
     };
 
     const priceSection = Paragraph("productDetailsPriceByMariePierreLessard");
-    /* The string template is my addition to meet assignment requirements */
+    /* The string template is my addition to meet assignment requirements.
+    Assignment says shipping fees are included in the price. */
     /* Legal requirement/mandatory:
     "Det er desuden et krav at det fremgår på prisen om den er ekslusiv eller inklusiv afgifter og leveringsomkostninger."
     https://moodle.techcollege.dk/course/section.php?id=282509
     There can't be anything between the price and the button.
     (See also 2.2 in TC's Guide for webshops).
     */
-    priceSection.innerHTML = `<strong>${price2Dkk(price)}</strong>, inkl. moms og ekskl. fragtudgifter`;
+    priceSection.innerHTML = `<strong>${price2Dkk(price)}</strong>, inkl. moms og fragtudgifter`;
     /* Codealong said: 
     infoCol.append(priceSection);
     */

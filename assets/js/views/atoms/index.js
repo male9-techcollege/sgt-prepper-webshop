@@ -90,6 +90,19 @@ export const Form = (method = "GET") => {
     return element;
 };
 
+export const FieldsetByMariePierreLessard = (className = "") => {
+    const element = document.createElement("fieldset");
+    element.className = className;
+    return element;
+};
+
+export const LegendByMariePierreLessard = (text, className = "") => {
+    const element = document.createElement("legend");
+    element.innerText = text;
+    element.className = className;
+    return element;
+};
+
 export const Label = (title, id, className = "mr-4") => {
     const element = document.createElement("label");
     /* Thanks to the for attribute, the focus is placed on the associated input when the user clicks on the label.

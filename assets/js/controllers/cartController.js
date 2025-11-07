@@ -47,6 +47,8 @@ export const CartPage = async () => {
         return sum + (item?.product?.price * item?.quantity || 0);
     }, 0);
 
+    /* This is in the controller function because this function returns the layout, not the arguments arrHeaderColumns, data and totalPrice.
+    (Technically, that is view code, but there are time constraints.) */
     const colouredCartContainerByMariePierreLessard = Div("colouredCartContainerByMariePierreLessard");
     colouredCartContainerByMariePierreLessard.append(cartListHeaderView(arrHeaderColumns), cartListView(data), cartTotalView(totalPrice));
 

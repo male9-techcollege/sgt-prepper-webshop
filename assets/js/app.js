@@ -23,6 +23,8 @@ import { ReturnsAndComplaintsPageByMariePierreLessard } from './controllers/retu
 import { SupportAndWarrantyPageByMariePierreLessard } from './controllers/supportController.js';
 /* Later addition in codealongs */
 import { LoginPage } from './controllers/loginController.js';
+/* My addition to v9 of codealong */
+import { OrderPage } from './controllers/orderController.js';
 
 const ROOT = document.getElementById("container");
 
@@ -43,6 +45,7 @@ router({
   '/cart': () => CartPage(), // Cart
   /* Later addition in codealongs */
   '/login': () => LoginPage(), // Login
+  '/order': () => OrderPage(), // Order
   /* My additions to v6 of codealong in view of meeting assignment requirements */
   '/terms': () => TermsPageByMariePierreLessard(), // Handelsbetingelser
   '/privacy': () => PrivacyPolicyPageByMariePierreLessard(), // Cookie-politik/privatlivspolitik

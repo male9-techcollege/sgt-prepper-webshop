@@ -1,11 +1,3 @@
-/* In function cartTotalView:
-- Add button: "Gå til bestilling"
-- After VAT, add line for shipping fees or to indicate that they will be calculated based on address at the next stage of process (order page)
-("og ekskl. fragtudgifter" is said in detailed view). As placeholder: 10% of purchase price? 
-*/
-/* TO DO: the buyer has to actively accept the terms and conditions of purchase (order page?) */
-/* TO DO: mandatory to add methods of payment, e.g. with icons under Buy now button */
-
 import { price2Dkk } from "../../utils/index.js";
 import { Div, Ul, Li, Button } from "../atoms/index.js";
 import { vatCalculationByMariePierreLessard } from "../../controllers/cartController.js";
@@ -161,15 +153,21 @@ export const cartTotalView = totalPrice => {
     (See also 2.2 in TC's Guide for webshops).
      */
     const shippingNoteByMariePierreLessard = Div("cursiveByMariePierreLessard");
-    shippingNoteByMariePierreLessard.innerText = "Eventuelle fragtudgifter tilføjes på bestillingssiden.";
+    shippingNoteByMariePierreLessard.innerText = "Fragten til danske adresser er inkluderet i prisen.";
 
     const cartButtonByMariePierreLessard = Button("Gå til bestilling", "button");
+    /* Troubleshooting: 
+    When I tried to add an event listener for "Gå til bestilling" button in cartController.js, it ended up bugging 
+    because the asynchronous function that called the event listeners added them to the view code 
+    before this particular button was created. The solution is to add event listeners here even though they are
+    controller code. Bo said it's okay. The MVC architecture just represents guidelines. */
+    cartButtonByMariePierreLessard.addEventListener("click", (e) => {
+        window.location.href = "/index.htm#/order";
+        /* Alternative: 
+        window.location.hash = "/order"; 
+        */
+    });
 
-    /* For some reason, if I add a 4th column (spacerCol or totalCol), weird things happen. 
-    If I add a textCol, totalCol and textCol get switched around (reverse order).
-    If I add a spacerCol at the end, it's like a removed the first spacerCol. 
-    It's weird because adding empty DIVs in a HTML file doesn't normally do that. The styling is an inner grid (inside of a grid with the whole table).
-    */
     /* Codealong said:
     totalRow.append(spacerCol, textCol, totalCol);
     return totalRow;
