@@ -18,6 +18,7 @@ export const Header = (className = '') => {
 };
 */
 
+/* Maybe TO DO: 2-row grid with hero pic in second row. */
 export const HeaderView = () => {
     const element = document.createElement("header");
     /* CLI, e.g. Tailwind CLI: command-line interface.
@@ -187,8 +188,7 @@ export const FooterView = (className = '') => {
     /* My addition/changes in view of meeting assignment requirements */
     element.className = "globalFooterByMariePierreLessard";
 
-    const firstRowByMariePierreLessard = Div();
-    firstRowByMariePierreLessard.className = "globalFooter1stRowByMariePierreLessard";
+    const firstRowByMariePierreLessard = Div("globalFooter1stRowByMariePierreLessard");
     /* HTML validator says:
     no address element inside of a UL element */
     firstRowByMariePierreLessard.innerHTML = `
@@ -215,11 +215,10 @@ export const FooterView = (className = '') => {
         </ul>
     </div>`;
 
-    const secondRowByMariePierreLessard = Div();
+    const secondRowByMariePierreLessard = Div("globalFooter2ndRowByMariePierreLessard");
     /* Tailwind styling */
     // secondRowByMariePierreLessard.className = "h-[170px] bg-[url(./images/footer-bg.svg)] bg-center bg-no-repeat";
     /* My change in view of delivering the exercise without Tailwind */
-    secondRowByMariePierreLessard.className = "globalFooter2ndRowByMariePierreLessard";
     element.append(firstRowByMariePierreLessard, secondRowByMariePierreLessard);
 
     return element;

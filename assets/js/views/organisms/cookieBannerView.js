@@ -34,9 +34,8 @@ export const cookieBannerView = () => {
     const text = Div("text-sm md:text-base");
     */
     /* I considered making this a form element, but it doesn't make sense since I don't want to make a POST request. */
-    const wrap = Div();
-    /* My addition to improve styling */
-    wrap.className = "flexedFormByMariePierreLessard";
+    /* The class is my addition to improve styling */
+    const wrap = Div("flexedFormByMariePierreLessard");
 
     const text = Div();
     /* Codealong said: 

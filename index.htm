@@ -1,31 +1,54 @@
+<!-- Open Graph (OG) tags vi altid bør inkludere (kilde: Moodle)
+
+<html prefix="og:https://ogp.me/ns#">
+<meta property="og:title" content="The Rock" />
+<meta property="og:type" content="video.movie" />
+<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og:https://ogp.me/ns#>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset=" UTF-8">
+    <!-- og:title isn't meant to be a copy of the title element.
+    "Keep OG title short (without a brand name) with 60 characters for desktop and 40 for mobile."
+    https://magefan.com/blog/open-graph-meta-tags  
+    These titles do get truncated on SoMe platforms if they are too long. -->
+    <!-- 49 characters -->
+    <meta property="og:title" content="Forsyninger til nødsituationer og naturoplevelser" />
+    <!-- Source for type: https://ogp.me -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://127.0.0.1:5501/index.htm" />
+    <meta property="og:image" content="http://127.0.0.1:5501/assets/images/welcome.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Since the favicon is a SVG file, its type is image/svg+xml 
-        Source: https://forum.bricksbuilder.io/t/no-bug-svg-favicons-missing-image-svg-xml-type/23050 
+<!-- "The meta description is not directly visible for the user, so you can put there anything you that is user. Then Google may use part of that meta description in the search results. Google will pick a part of the meta description that matches better the keywords that the user type in the search text input box. (...)
+So to conclude, do not worry about the length of those values. Just make sure those values make the purpose of the page clear for the user."
+https://support.google.com/webmasters/thread/167015860/what-is-length-of-meta-description-and-title?hl=en -->
+<!-- The following description includes 300 characters. 
+Some sources advise 150-160 ch. max. The most important text (Udstyr og forsyninger til trivsel og overlevelse i nødsituationer, rejser og naturoplevelser) is shorter than that. -->   
+    <meta name="description" content="Udstyr og forsyninger til trivsel og overlevelse i nødsituationer, rejser og naturoplevelser, bl.a. vandrensningsløsninger/vandfiltre, nemme måltider og langtidsopbevaring af mad, førstehjælpskit, multifunktionsværktøj, opladere som strømstationer og solpaneler, kompas og nødkommunikationsløsninger.">
+<!-- Since the favicon is a SVG file, its type is image/svg+xml 
+Source: https://forum.bricksbuilder.io/t/no-bug-svg-favicons-missing-image-svg-xml-type/23050 
        
-        VSC gives the rel="shortcut icon", but acc. to W3Schools, favicons just have rel="icon" 
-        https://www.w3schools.com/html/html_favicon.asp
+VSC gives the rel="shortcut icon", but acc. to W3Schools, favicons just have rel="icon" 
+https://www.w3schools.com/html/html_favicon.asp
     
-        Apparently, rel="shortcut icon" is outdated.
-        https://www.drupal.org/node/3220042
-        -->
+Apparently, rel="shortcut icon" is outdated.
+https://www.drupal.org/node/3220042
+-->
     <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/css/styling.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind includes a CSS reset. 
-    <script src="https://cdn.tailwindcss.com"></script>
-    -->
+<!-- Tailwind includes a CSS reset. 
+<script src="https://cdn.tailwindcss.com"></script>
+-->
     <script type="module" defer src="./assets/js/app.js"></script>
-    <title>Sgt. Prepper</title>
+    <title>Sgt. Preppers webshop</title>
 </head>
 
 <body>
